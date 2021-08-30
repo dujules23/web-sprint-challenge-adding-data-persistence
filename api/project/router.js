@@ -10,7 +10,7 @@ const router = express.Router()
 
 // const validation = require('../Middlewares/validationMiddleware')
 // const projectSchema = require('../Validations/projectValidation')
-const projectMiddleware = require('../Middlewares/projectMiddleware')
+// const projectMiddleware = require('../Middlewares/projectMiddleware')
 
 // Endpoints go here
 
@@ -24,7 +24,7 @@ router.get('/', (req, res) => {
     })
 })
 
-router.post('/', projectMiddleware, (req,res) => {
+router.post('/', (req,res) => {
   Projects.createProject(req.body)
     .then(resource => {
       res.status(201).json(resource)
