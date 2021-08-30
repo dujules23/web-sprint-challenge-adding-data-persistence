@@ -2,6 +2,7 @@
 
 const server = require('./api/server')
 
+
 // Bring in dotenv with config method
 const dotenv = require('dotenv').config()
 
