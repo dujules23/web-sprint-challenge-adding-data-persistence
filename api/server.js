@@ -13,8 +13,9 @@ const cors = require('cors')
 const server = express();
 
 // Bring in Routers
-
 const resourceRouter = require('./resource/router')
+const projectRouter = require('./project/router')
+const taskRouter = require('./task/router')
 
 server.use(express.json());
 
@@ -29,6 +30,8 @@ server.use(cors ({
 
 // use Routers
 server.use('/api/resources', resourceRouter)
+server.use('/api/projects', projectRouter)
+server.use('/api/tasks', taskRouter)
 // server.use('/api/*', (_, res) => {
 //   res.json({ data: 'will output to all endpoints'  });
 // });
